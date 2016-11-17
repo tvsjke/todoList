@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+html {
+    background: #eee;
+    padding: 0 20px;
+    min-width: 450px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    color: #999;
+    text-shadow: 0px 2px 3px rgba(140, 140, 140, 0.4);
+}
+
+#container {
+    background: #fff;
+    margin-bottom: auto;
+    max-width: 550px;
+    width: 100%;
+    font-size: 24px;
+}
+
+#todo-app {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+                0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.todo-new input {
+    padding: 16px;
+    border: none;
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.08);
+    font-size: 24px;
+    outline: none;
+    width: 100%;
+}
+
+.todo-new input::-webkit-input-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #e6e6e6;
+}
+
+.todo-new input::-moz-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #e6e6e6;
+}
+
+.todo-new input:-ms-input-placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #e6e6e6;
+}
+
+.todo-new input::placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #e6e6e6;
+}
+
+.todo-filter {
+    margin:0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    box-shadow: inset 0 -2px 1px rgba(0,0,0,0.08);
+    font-size: 14px;
+}
+
+.todo-filter li {
+    padding: 15px 0;
+}
+
+.todo-filter li a {
+    color: #888;
+    text-decoration: none;
+    padding: 4px 8px;
+    margin: 15px 5px;
+    border-radius: 5px;
+}
+
+.todo-filter li a.active {
+    border: 1px solid rgba(175, 47, 47, 0.2);
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.todo-list li {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.todo-list li input.checkbox {
+    display: none;
+}
+
+.todo-list li label {
+    margin-left: 10px;
+    padding-left: 50px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZWRlZGVkIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: left;
+    line-height: 40px;
+}
+
+.todo-list li input.checkbox:checked + label {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTEwIC0xOCAxMDAgMTM1Ij48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYmRkYWQ1IiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBmaWxsPSIjNWRjMmFmIiBkPSJNNzIgMjVMNDIgNzEgMjcgNTZsLTQgNCAyMCAyMCAzNC01MnoiLz48L3N2Zz4=);
+}
+
+.todo-list li label.completed {
+    text-decoration: line-through;
+    color: #eee;
+}
+
+.todo-list li button.todo-remove {
+    margin: 0 15px;
+    color: pink;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.todo-list li button.todo-remove:hover {
+    color: red;
+}
+
+footer {
+    width: 100%;
+}
